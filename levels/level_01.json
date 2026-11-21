@@ -1,0 +1,31 @@
+{
+  "name": "01 - Lobby",
+  "briefing": "Hack the records terminal and reach the exit. Watch the patrol's vision cone.",
+  "map": [
+    "#############",
+    "#P....#.....#",
+    "#.....#.....#",
+    "#.....#..T..#",
+    "#..~~.......#",
+    "#.....#.....#",
+    "#.....#....E#",
+    "#############"
+  ],
+  "terminals": [
+    {
+      "id": "t1",
+      "pos": [9, 3],
+      "objective": true,
+      "targets": []
+    }
+  ],
+  "guards": [
+    {
+      "id": "g1",
+      "pos": [7, 1],
+      "facing": "E",
+      "route": [[11, 1], [11, 5], [7, 5], [7, 1]]
+    }
+  ],
+  "reference_solution": "DRRRDRDRRRDRUHDDRR"
+}

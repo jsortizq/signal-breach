@@ -1,0 +1,64 @@
+{
+  "name": "04 - Vault",
+  "briefing": "A rotating camera covers the vault. Kill it from the security terminal or time your moves.",
+  "map": [
+    "################",
+    "#P..#.T........#",
+    "#...#..........#",
+    "#...D....##..T.#",
+    "#...#....##....#",
+    "#...#..........#",
+    "#.T.#.....~~~.E#",
+    "################"
+  ],
+  "doors": [
+    {
+      "id": "d1",
+      "pos": [4, 3]
+    }
+  ],
+  "terminals": [
+    {
+      "id": "t1",
+      "pos": [2, 6],
+      "objective": false,
+      "targets": ["d1"]
+    },
+    {
+      "id": "t2",
+      "pos": [13, 3],
+      "objective": true,
+      "targets": []
+    },
+    {
+      "id": "t3",
+      "pos": [6, 1],
+      "objective": false,
+      "targets": ["c1"]
+    }
+  ],
+  "guards": [
+    {
+      "id": "g1",
+      "pos": [7, 5],
+      "facing": "E",
+      "route": [[13, 5], [7, 5]]
+    },
+    {
+      "id": "g2",
+      "pos": [11, 1],
+      "facing": "S",
+      "route": [[11, 2], [14, 2], [14, 1], [11, 1]]
+    }
+  ],
+  "cameras": [
+    {
+      "id": "c1",
+      "pos": [15, 4],
+      "facings": ["W", "N"],
+      "period": 2,
+      "range": 4
+    }
+  ],
+  "reference_solution": "DDRDDHUURRRRUHDRRDDRRRURRHDDR"
+}

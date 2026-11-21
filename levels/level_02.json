@@ -1,0 +1,38 @@
+{
+  "name": "02 - Archives",
+  "briefing": "Diagonal shelving splits the archive. Shelves block sight completely \u2014 use them to shadow the patrol, grab the ledger and get out.",
+  "map": [
+    "#############",
+    "#.........P.#",
+    "#...#.......#",
+    "#T...#......#",
+    "#.....#.....#",
+    "#......#....#",
+    "#...........#",
+    "#..~~~.....E#",
+    "#############"
+  ],
+  "terminals": [
+    {
+      "id": "t1",
+      "pos": [1, 3],
+      "objective": true,
+      "targets": []
+    }
+  ],
+  "guards": [
+    {
+      "id": "g1",
+      "pos": [2, 6],
+      "facing": "N",
+      "route": [[2, 6], [2, 4], [4, 6]]
+    },
+    {
+      "id": "g2",
+      "pos": [10, 6],
+      "facing": "W",
+      "route": [[10, 6], [8, 6]]
+    }
+  ],
+  "reference_solution": "LLLLLLLDDDDLUUHDDRRRWDDRRRRRR"
+}

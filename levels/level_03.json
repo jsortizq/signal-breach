@@ -1,0 +1,51 @@
+{
+  "name": "03 - Server Wing",
+  "briefing": "The server room is sealed. Open it from the maintenance tunnel, steal the data, and leave by the service exit. Metal grating is noisy.",
+  "map": [
+    "################",
+    "#P.....#.......#",
+    "#......#....T..#",
+    "#......D.......#",
+    "#......#.......#",
+    "#.#.############",
+    "#.#.~..........#",
+    "#.#.~.##..##.T.#",
+    "#E#............#",
+    "################"
+  ],
+  "doors": [
+    {
+      "id": "d1",
+      "pos": [7, 3]
+    }
+  ],
+  "terminals": [
+    {
+      "id": "t1",
+      "pos": [13, 7],
+      "objective": false,
+      "targets": ["d1"]
+    },
+    {
+      "id": "t2",
+      "pos": [12, 2],
+      "objective": true,
+      "targets": []
+    }
+  ],
+  "guards": [
+    {
+      "id": "g1",
+      "pos": [12, 6],
+      "facing": "W",
+      "route": [[9, 6], [9, 8], [12, 8], [12, 6]]
+    },
+    {
+      "id": "g2",
+      "pos": [9, 1],
+      "facing": "E",
+      "route": [[13, 1], [13, 4], [9, 4], [9, 1]]
+    }
+  ],
+  "reference_solution": "DRRDDDDRRDDRLRRRRRRRUHULLLLLLLLLUURRRURRDURRRUHDLLLLLDLLLLLDDDD"
+}

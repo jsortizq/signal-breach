@@ -1,0 +1,17 @@
+# Godot 4
+.godot/
+/android/
+*.import
+!*.svg.import
+export_credentials.cfg
+
+# Builds
+build/
+*.zip
+*.pck
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.vscode/
+*.tmp
