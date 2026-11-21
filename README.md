@@ -130,6 +130,16 @@ godot --headless --path . --script res://tools/trace.gd -- res://levels/level_01
 
 Map legend: `#` wall · `.` floor · `~` noisy floor · `P` player · `E` exit (`D` and `T` are visual hints only). `LevelLoader.validate()` rejects levels with objects inside walls, unknown terminal targets, blocked waypoints and similar mistakes. CI runs it on every level.
 
+## Part of a three-game portfolio
+
+| Project | Focus |
+|---------|-------|
+| [Signal Breach](https://github.com/jsortizq/signal-breach) | Turn-based grid stealth: deterministic simulation, guard FSM, vision, undo |
+| [Overload Protocol](https://github.com/jsortizq/overload-protocol) | Real-time 2D arena shooter: fixed-tick sim, modular weapons, pooled swept-ray projectiles, boss |
+| [Relay Station](https://github.com/jsortizq/relay-station) | 3D third-person systems sandbox: power graph, inventory & crafting, physics props, nav drone, versioned saves |
+
+Each one has a headless test suite in CI and a `tasks/` folder of bug and feature challenges.
+
 ## License
 
 MIT
