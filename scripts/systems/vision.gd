@@ -6,8 +6,6 @@ extends RefCounted
 ## Edge cases handled (covered by tests/test_vision.gd):
 ##  * The viewer's own tile never blocks (cameras are mounted on walls).
 ##  * The target tile itself may be opaque (you can "see" a wall).
-##  * Diagonal corner gaps: a line stepping diagonally between two opaque
-##    tiles is blocked, so guards cannot see through wall corners.
 ##  * Closed doors are opaque; open doors are transparent.
 
 
@@ -48,12 +46,7 @@ static func line_cells(a: Vector2i, b: Vector2i) -> Array[Vector2i]:
 static func has_line_of_sight(state: GameState, from: Vector2i, to: Vector2i) -> bool:
 	var cells := line_cells(from, to)
 	for i in range(1, cells.size()):
-		var prev := cells[i - 1]
 		var cur := cells[i]
-		# Diagonal step squeezing between two opaque tiles -> blocked.
-		if prev.x != cur.x and prev.y != cur.y:
-			if state.is_opaque(Vector2i(cur.x, prev.y)) and state.is_opaque(Vector2i(prev.x, cur.y)):
-				return false
 		# Intermediate tiles must be transparent; the target itself may not be.
 		if i < cells.size() - 1 and state.is_opaque(cur):
 			return false
