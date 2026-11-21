@@ -44,7 +44,7 @@ Diff between the branches: `git diff bug/01-vision-through-shelf-corners main --
 | Alternative | Problem |
 |-------------|---------|
 | Make the shelves 2 tiles thick in the level | Hides the symptom; any diagonal wall in a future level leaks again. The brief forbids editing the level. |
-| Block if **either** neighbour is opaque | Too strict: guards could no longer see past the corner of a single wall, which changes vision across every level (level 04 breaks). |
+| Block if **either** neighbour is opaque | Too strict: nothing could see past the corner of a single wall. In level 04, camera `c1` would lose sight of `(13,2)`, which changes the balance of every level. |
 | Switch to a "supercover" line (visit every tile the line touches) | Correct, but bigger and it changes which tiles count as visible at every distance, so the cones and the level balance change. |
 
 ## Verification done
