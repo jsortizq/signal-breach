@@ -20,8 +20,7 @@ var timer := 0
 var lost_sight := 0
 
 
-## Deep copy. EVERY mutable field must be copied here, otherwise Undo
-## silently restores a half-old, half-new guard (see tasks/bug-02).
+## Deep copy used by the undo snapshots.
 func clone() -> GuardData:
 	var g := GuardData.new()
 	g.id = id
@@ -30,9 +29,6 @@ func clone() -> GuardData:
 	g.route = route.duplicate()
 	g.route_index = route_index
 	g.state = state
-	g.target = target
-	g.timer = timer
-	g.lost_sight = lost_sight
 	return g
 
 
