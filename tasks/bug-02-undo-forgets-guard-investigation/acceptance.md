@@ -11,7 +11,7 @@ Input token `Z` = undo (supported by `Replay.run` and `tools/trace.gd`).
 | With undo | `DDDRRWWWWWWWRWZW` |
 | Expected | Both end with an identical `GameState.summary()`, including `g1:SUSPICIOUS@(6,4)>W r2 t(4,4) tm2 ls0` |
 | Expected visual | g1 one tile right of the gap with an orange `?` and an orange cone pointing West. With F1, an orange line runs from g1 to the noise tile (4,4). |
-| Buggy | With the undo, g1 ends `PATROL`, having rotated in place; the debug line to (4,4) is missing |
+| Buggy | With the undo: `g1:PATROL@(7,4)>E r2 t(0,0) tm-1 ls0`. g1 rotated in place and dropped the investigation; the debug line to (4,4) is missing. |
 
 ## B. The snapshot itself (must change)
 
@@ -37,5 +37,7 @@ Input token `Z` = undo (supported by `Replay.run` and `tools/trace.gd`).
 godot --headless --path . --script res://tests/run_tests.gd
 ```
 
-Must report **0 failed**. Before the fix it fails `test_undo_restores_guard_memory` and
-`test_undo_redo_matches_straight_run_on_level_01`.
+Must report **0 failed**. Before the fix it fails `test_undo_restores_guard_memory`,
+`test_undo_redo_matches_straight_run_on_level_01` and `test_suspicious_guard_searches_then_resumes_patrol`.
+The last one fails because `TurnProcessor` also clones the initial state, so the bug shows up
+even without pressing Undo whenever a level starts with a guard that isn't on patrol.
