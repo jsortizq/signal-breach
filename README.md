@@ -8,7 +8,7 @@ Sneak through a facility, hack the data terminals and reach the exit without bei
 
 ![Level 3 (Server Wing)](docs/screenshot.png)
 
-> **Play:** _itch.io link here_ · **Controls:** WASD / arrows move · Space wait · E hack · Z undo · R restart · F1 debug overlay · F2 copy input log
+> **Play:** [jsortizq.itch.io/signal-breach](https://jsortizq.itch.io/signal-breach) (runs in the browser) · **Controls:** WASD / arrows move · Space wait · E hack · Z undo · R restart · F1 debug overlay · F2 copy input log
 
 ---
 
